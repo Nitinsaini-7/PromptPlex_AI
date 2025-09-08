@@ -13,15 +13,15 @@ const Navbar = () => {
     <div className="fixed z-5 w-full backdrop-blur-2xl flex justify-between items-center py-3 px-4 sm:px-20 xl:px-32">
       <img
         onClick={() => navigate("/")}
-        src={assets.logo}
+        src={'/logo.png'}
         alt=""
-        className="w-32 sm:w-44"
+        className="w-14 sm:w-16"
       />
 
       {user ? (
         <UserButton />
       ) : (
-        <button onClick={openSignIn} className="flex gap-2 bg-primary text-white p-3 px-4 rounded-full">
+        <button onClick={openSignIn} className="flex gap-2 bg-gradient-to-r from-primary to-sky-500 text-white p-3 px-4 rounded-full">
           Get Started
           <ArrowRight />
         </button>

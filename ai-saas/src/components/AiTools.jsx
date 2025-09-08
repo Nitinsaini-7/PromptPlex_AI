@@ -1,9 +1,10 @@
 import React from "react";
 import { AiToolsData } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const AiTools = () => {
   return (
-    <div className="px-10">
+    <div className="px-5 md:px-10">
       <div className=" flex items-center justify-center text-center mb-5">
         <div className=" max-w-xl">
           <h1 className=" text-3xl font-semibold mb-2">Smart AI Tools</h1>
@@ -13,11 +14,11 @@ const AiTools = () => {
           </p>
         </div>
       </div>
-      <div className=" grid md:grid-cols-4 gap-5">
+      <div className=" grid md:grid-cols-3 gap-10">
         {AiToolsData.map((item, index) => (
-          <div key={index} className=" border-gray-200 border  p-5">
+          <Link to={"ai"} key={index} className=" border-gray-200 rounded-xl hover:scale-105 cursor-pointer duration-300 shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-8">
             <item.Icon
-              className=" w-10 h-10 text-white p-2 rounded-full"
+              className=" w-12 h-12 text-white p-3 rounded-full"
               style={{
                 background: `linear-gradient(to bottom, ${item.bg.from}, ${item.bg.to})`,
               }}
@@ -27,7 +28,7 @@ const AiTools = () => {
               <h1 className=" text-lg font-semibold">{item.title}</h1>
               <p className=" text-sm text-gray-600">{item.description}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

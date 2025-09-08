@@ -15,6 +15,7 @@ import {
   Shield,
   Heart
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,31 +66,26 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI Creator
-              </span>
+            <div className="">
+              <img src="/logo.png" className='w-20 h-20 ' alt="logo" />
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-300 my-4 max-w-md">
               Empowering creators with cutting-edge AI tools. Generate content, optimize workflows, and unleash your creativity with our comprehensive AI-powered platform.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-2">
-              <div className="flex items-center text-gray-400">
+              <Link to={"mailto:nitin00sainii@gmail.com"} className="flex items-center text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>hello@aicreator.com</span>
-              </div>
-              <div className="flex items-center text-gray-400">
+                <span>nitin00sainii@gmail.com</span>
+              </Link>
+              <Link to={"tel:7452863255"} className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400">
+                <span>+91-7452863255</span>
+              </Link>
+              <div className="flex items-center text-gray-300">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>San Francisco, CA</span>
+                <span>Noida, UP</span>
               </div>
             </div>
           </div>
@@ -104,7 +100,7 @@ const Footer = () => {
                   <li key={service.name}>
                     <a 
                       href={service.href}
-                      className="flex items-center text-gray-400 hover:text-white transition-colors duration-200 group"
+                      className="flex items-center text-gray-300 hover:text-white transition-colors duration-200 group"
                     >
                       <IconComponent className="w-4 h-4 mr-2 group-hover:text-blue-400 transition-colors" />
                       {service.name}
@@ -123,7 +119,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -140,7 +136,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -154,7 +150,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="max-w-md">
             <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">Get the latest AI tools and updates delivered to your inbox.</p>
+            <p className="text-gray-300 mb-4">Get the latest AI tools and updates delivered to your inbox.</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
@@ -180,7 +176,7 @@ const Footer = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                 >
                   {link.name}
                 </a>
@@ -195,7 +191,7 @@ const Footer = () => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-all duration-200"
                     aria-label={social.name}
                   >
                     <IconComponent className="w-5 h-5" />
@@ -210,7 +206,7 @@ const Footer = () => {
       {/* Trust Badge */}
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center justify-center text-gray-400 text-sm">
+          <div className="flex items-center justify-center text-gray-300 text-sm">
             <span>© {currentYear} AI Creator. Made with</span>
               <Heart className="w-4 h-4 mx-1 text-red-500" />
               <span>for creators worldwide.</span>
