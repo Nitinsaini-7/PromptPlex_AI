@@ -6,21 +6,33 @@ import { useUser } from "@clerk/clerk-react";
 
 const Hero = () => {
   const navigate = useNavigate();
-  const user = useUser();
+  const { isLoaded, isSignedIn, user } = useUser();
+  console.log(user);
 
   return (
     <div className="px-4 sm:px-20 xl:px-32 relative inline-flex flex-col w-full justify-center bg-[url(/gradientBackground.png)] bg-cover bg-no-repeat min-h-screen ">
       <div className=" text-center">
         <div className="mb-10">
           <div className="flex items-center justify-center text-4xl sm:text-5xl md:text-7xl font-bold space-x-3">
-            <span className="">👋</span>
             <div>
-              <p className="bg-gradient-to-r from-primary to-sky-600 bg-clip-text text-transparent ">{user.user.fullName}</p>
+              {isLoaded && isSignedIn ? (
+                <>
+                <div className=" flex items-center justify-center">
+
+                <span className="">👋</span>
+                  <p className="bg-gradient-to-r from-primary to-sky-600 bg-clip-text text-transparent ">
+                    {user.fullName}
+                  </p>
+                </div>
+                  <p className=" text-2xl">
+                    Welcome back! Ready for an amazing experience?
+                  </p>
+                </>
+              ) : (
+                <p className="text-gray-500"></p>
+              )}
             </div>
           </div>
-        <p className=" text-2xl">
-          Welcome back! Ready for an amazing experience?
-        </p>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mx-auto max-w-4xl">
           Create Amazing Content with{" "}
