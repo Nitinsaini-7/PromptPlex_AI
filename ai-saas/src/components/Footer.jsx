@@ -207,7 +207,7 @@ const Footer = () => {
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex items-center justify-center text-gray-300 text-sm">
-            <span>© {currentYear} AI Creator. Made with</span>
+            <span>© {currentYear} PropmtPlex AI. Made with</span>
               <Heart className="w-4 h-4 mx-1 text-red-500" />
               <span>for creators worldwide.</span>
           </div>
